@@ -1,0 +1,196 @@
+/* Colors */
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  background: #49B97D;
+  /* fallback/image non-cover color */
+  background: #8BBAA5;
+  /* Firefox 3.6+ */
+  background: -moz-linear-gradient(to top right, #8BBAA5, #4DAC82);
+  /* Safari 4+, Chrome 1+ */
+  background: -webkit-gradient(left bottom, 0% 0%, 0% 100%, from(#8BBAA5), to(#4DAC82));
+  /* Safari 5.1+, Chrome 10+ */
+  background: -webkit-linear-gradient(to top right, #8BBAA5, #4DAC82);
+  /* Opera 11.10+ */
+  background: -o-linear-gradient(to top right, #8BBAA5, #4DAC82);
+  border-radius: 2px;
+  box-shadow: 2px 2px 10px 0 rgba(0, 0, 0, 0.2); }
+
+.container-inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 350px;
+  height: 350px;
+  transform: translate(-50%, -50%);
+  box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.2); }
+  .container-inner .main-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70%;
+    height: 100%;
+    background-color: #fff; }
+    .container-inner .main-content .header {
+      position: relative;
+      height: 200px;
+      width: 100%;
+      font-family: 'Lato', sans-serif; }
+      .container-inner .main-content .header .img-wrapper {
+        position: relative;
+        height: 60%;
+        padding-top: 10px; }
+        .container-inner .main-content .header .img-wrapper:hover > .img-container {
+          -ms-transform: rotate(360deg);
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg); }
+        .container-inner .main-content .header .img-wrapper:hover > .img-container-inner {
+          -ms-transform: rotate(360deg);
+          -webkit-transform: rotate(360deg);
+          transform: rotate(-360deg); }
+      .container-inner .main-content .header .img-container {
+        position: relative;
+        left: 50%;
+        width: 100px;
+        height: 100px;
+        margin-left: -42px;
+        border-left: 3px solid #36795C;
+        border-top: 3px solid #36795C;
+        border-right: 3px solid transparent;
+        border-bottom: 3px solid #36795C;
+        border-radius: 50%;
+        transition-property: transform;
+        transition: transform linear 1s; }
+      .container-inner .main-content .header .img-container-inner {
+        position: absolute;
+        top: 20px;
+        left: 90px;
+        width: 85px;
+        height: 85px;
+        transition-property: transform;
+        transition: transform linear 1s; }
+        .container-inner .main-content .header .img-container-inner:before {
+          content: "";
+          display: block;
+          position: absolute;
+          left: -3px;
+          top: -3px;
+          height: 100%;
+          width: 100%;
+          border-top: 3px solid #36795C;
+          border-left: 3px solid transparent;
+          border-bottom: 3px solid #36795C;
+          border-right: 3px solid #36795C;
+          border-radius: 50%; }
+      .container-inner .main-content .header .img {
+        position: relative;
+        top: -78px;
+        left: 42%;
+        width: 55px;
+        height: 55px;
+        background-image: url("../img/agent-business-call-center-41280.jpeg");
+        background-repeat: no-repeat;
+        background-position: center; }
+      .container-inner .main-content .header img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto; }
+      .container-inner .main-content .header .img-name {
+        text-align: center;
+        color: #36795C;
+        font-weight: 700; }
+      .container-inner .main-content .header .img-title {
+        text-align: center;
+        color: #36795C;
+        font-weight: 400; }
+    .container-inner .main-content .btn-follow {
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 10px 50px;
+      margin-bottom: 20px;
+      text-align: center;
+      font-family: 'Lato', sans-serif;
+      font-weight: 700;
+      border-radius: 50px;
+      border: 2px solid #36795C;
+      color: #36795C;
+      background-color: #fff; }
+      .container-inner .main-content .btn-follow:hover {
+        background-color: #36795C;
+        color: #fff; }
+    .container-inner .main-content .btn-message {
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 10px 44px;
+      text-align: center;
+      font-family: 'Lato', sans-serif;
+      font-weight: 700;
+      border-radius: 50px;
+      border: 2px solid #36795C;
+      color: #36795C;
+      background-color: #fff; }
+      .container-inner .main-content .btn-message:hover {
+        background-color: #36795C;
+        color: #fff; }
+  .container-inner .side-panel {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30%;
+    height: 100%;
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    color: #36795C; }
+  .container-inner .posts-container {
+    height: 115px;
+    margin-bottom: 2px;
+    background-color: #BAF8DD;
+    cursor: pointer; }
+    .container-inner .posts-container:hover {
+      background-color: #6FF8BC; }
+  .container-inner .posts-container-inner {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+  .container-inner .posts-number {
+    font-weight: 700;
+    font-size: 24px; }
+  .container-inner .likes-container {
+    height: 116px;
+    margin-bottom: 2px;
+    background-color: #BAF8DD;
+    cursor: pointer; }
+    .container-inner .likes-container:hover {
+      background-color: #6FF8BC; }
+  .container-inner .likes-container-inner {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+  .container-inner .likes-number {
+    font-weight: 700;
+    font-size: 24px; }
+  .container-inner .follower-container {
+    height: 116px;
+    margin-bottom: 2px;
+    overflow: hidden;
+    background-color: #BAF8DD;
+    cursor: pointer; }
+    .container-inner .follower-container:hover {
+      background-color: #6FF8BC; }
+  .container-inner .follower-container-inner {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+  .container-inner .follower-number {
+    font-weight: 700;
+    font-size: 24px; }

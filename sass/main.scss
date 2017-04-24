@@ -1,0 +1,272 @@
+﻿/* Colors */
+$light-green:  #BAF8DD;
+$light-green-hover: #6FF8BC;
+$dark-green-btn-hover: #36795C;
+
+@mixin gradient($from, $to) {
+  /* fallback/image non-cover color */
+  background: $from;
+
+  /* Firefox 3.6+ */
+  background: -moz-linear-gradient(to top right, $from, $to);
+
+  /* Safari 4+, Chrome 1+ */
+  background: -webkit-gradient(left bottom, 0% 0%, 0% 100%, from($from), to($to));
+
+  /* Safari 5.1+, Chrome 10+ */
+  background: -webkit-linear-gradient(to top right, $from, $to);
+
+  /* Opera 11.10+ */
+  background: -o-linear-gradient(to top right, $from, $to);
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  background: #49B97D;
+  @include gradient( #8BBAA5, #4DAC82);
+  border-radius: 2px;
+  box-shadow: 2px 2px 10px 0 rgba(0,0,0,.2);
+}
+
+.container-inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 350px;
+  height: 350px;
+  transform: translate( -50%, -50% );
+  box-shadow: 5px 5px 10px 0 rgba(0,0,0,.2);
+  
+  
+  .main-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70%;
+    height: 100%;
+    background-color: #fff;
+    
+    .header {
+      position: relative;
+      height: 200px;
+      width: 100%;
+      font-family: 'Lato', sans-serif;
+      
+      .img-wrapper {
+        position: relative;
+        height: 60%;
+        padding-top: 10px;
+        
+        &:hover > .img-container {         
+           -ms-transform: rotate(360deg);
+           -webkit-transform: rotate(360deg);
+           transform: rotate(360deg);
+        }
+        
+        &:hover > .img-container-inner {
+          -ms-transform: rotate(360deg);
+          -webkit-transform: rotate(360deg);
+          transform: rotate(-360deg);
+        }
+      }
+      
+      .img-container {
+        position: relative;
+        left: 50%;
+        width: 100px;
+        height: 100px;
+        margin-left: -42px;
+        border-left: 3px solid $dark-green-btn-hover; 
+        border-top: 3px solid $dark-green-btn-hover; 
+        border-right: 3px solid transparent; 
+        border-bottom: 3px solid $dark-green-btn-hover; 
+        border-radius: 50%;
+        transition-property: transform;
+        transition: transform linear 1s;
+        
+      }
+      
+      .img-container-inner {
+        position: absolute;
+        top: 20px;
+        left: 90px;
+        width: 85px;
+        height: 85px;
+        transition-property: transform;
+        transition: transform linear 1s;
+        
+        &:before {
+          content: "";
+          display: block;
+          position: absolute;
+          left: -3px;
+          top: -3px;
+          height: 100%;
+          width: 100%;
+          border-top: 3px solid $dark-green-btn-hover;
+          border-left: 3px solid transparent;
+          border-bottom: 3px solid $dark-green-btn-hover;
+          border-right: 3px solid $dark-green-btn-hover;
+          border-radius: 50%;
+        }
+
+      }
+      
+      .img {
+        position: relative;
+        top: -78px;
+        left: 42%;
+        width: 55px;
+        height: 55px;
+        background-image: url("../img/agent-business-call-center-41280.jpeg");
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+      
+      img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      
+      .img-name {
+        text-align: center;
+        color: $dark-green-btn-hover;
+        font-weight: 700;
+      }
+      
+      .img-title {
+        text-align: center;
+        color: $dark-green-btn-hover;
+        font-weight: 400;
+      }
+    }
+    
+    .btn-follow {
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 10px 50px;
+      margin-bottom: 20px;
+      text-align: center;
+      font-family: 'Lato', sans-serif;
+      font-weight: 700;
+      border-radius: 50px;
+      border: 2px solid $dark-green-btn-hover;
+      color: $dark-green-btn-hover;
+      background-color: #fff;
+      
+      &:hover {
+        background-color: $dark-green-btn-hover;
+        color: #fff;
+      }
+    }
+    
+    .btn-message {
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 10px 44px;
+      text-align: center;
+      font-family: 'Lato', sans-serif;
+      font-weight: 700;
+      border-radius: 50px;
+      border: 2px solid $dark-green-btn-hover;
+      color: $dark-green-btn-hover;
+      background-color: #fff;
+      
+      &:hover {
+        background-color: $dark-green-btn-hover;
+        color: #fff;
+      }
+    }
+  }
+  
+  .side-panel {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30%;
+    height: 100%;
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    color: $dark-green-btn-hover;
+  }
+  
+  .posts-container {
+    height: 115px;
+    margin-bottom: 2px;
+    background-color: $light-green;
+    cursor: pointer;
+    
+    &:hover {
+      background-color: $light-green-hover;
+    }
+  }
+  
+  .posts-container-inner {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .posts-number{
+    font-weight: 700;
+    font-size: 24px;
+  }
+  
+  .likes-container {
+    height: 116px;
+    margin-bottom: 2px;
+    background-color: $light-green;
+    cursor: pointer;
+    
+    &:hover {
+      background-color: $light-green-hover;
+    }
+  }
+  
+  .likes-container-inner {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .likes-number{
+    font-weight: 700;
+    font-size: 24px;
+  }
+  
+  .follower-container {
+    height: 116px;
+    margin-bottom: 2px;
+    overflow: hidden;
+    background-color: $light-green;
+    cursor: pointer;
+    
+    &:hover {
+      background-color: $light-green-hover;
+    }
+  }
+  
+  .follower-container-inner {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .follower-number {
+    font-weight: 700;
+    font-size: 24px;
+  }
+}
+
